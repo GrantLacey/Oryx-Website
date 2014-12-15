@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/slider.css">
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700,600,400, 300' rel='stylesheet' type='text/css'>
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+		<script src="jquery.carouFredSel-6.2.0-packed.js" type="text/javascript"></script>
+	</head>
+
+	<header id="header" class="group">
+		<a href="index.html"  id="logo" class="group">
+			<img id="logoimg" src="img/webLogoCropped.png" alt="bg" />
+		</a>
+
+		<div id="language" class="group">
+			<a href="products.html">English</a>
+			<a href="about.html">Portugese</a>
+			<a href="contact.html">Mandarin</a>			
+		</div>
+
+		<ul id="nav" class="nav group">		
+				<li><a href="products.html">Product Line</a></li>
+				<li><a href="about.html">About Oryx</a></li>
+				<li><a href="contact.html">Contact</a></li>
+		</ul>		
+	</header>	
+
+	<body>
+		<div id="wrapper">
+			<div id="slider">
+	
+				<div class="slide" style="background-image: url(img/LS150.png);">
+					<div class="slide-block">
+						<h4>LS 150</h4>
+						<p></p>
+					</div>
+				</div>
+		
+				<div class="slide" style="background-image: url(img/leader.png);">
+					<div class="slide-block">
+						<h4>For The Birds</h4>
+						<p></p>
+					</div>
+				</div>
+		
+				<div class="slide" style="background-image: url(img/LG700.png);">
+					<div class="slide-block">
+						<h4>LG700</h4>
+						<p></p>
+					</div>
+				</div>
+		
+			</div>
+		</div>
+
+		<div id="section">
+			<div id="leftside" class="group">
+				<h1>What would you like to measure or detect?</h1>
+				<div class="tile group" id="batteryElectrode"></div>
+				<div class="tile group" id="metal-strip">
+					<p>metal sheet | metal strip</p>
+				</div>
+				<div class="tile group" id="plastic">
+					<p>transparent | semi-transparent films &amp plastics</p>
+				</div>
+				
+				<div class="tile group"></div>
+				<div class="tile group"></div>
+			</div>
+
+			<div class="group" id="middle">
+				<p>Oryx Systems has the experience to deliver what matters in your application. When &plusmn 1 &microm precision is required 365 days per year, every variable must be considered. From the thermal expansion properties of our gauge hardware, to the relative humidty of your plant floor we leave nothing to chance.</br>
+
+				Ease of use is of equal importance in the design of our precision thickness mesurement systems. 
+
+				bersexual locavore tattooed Pitchfork authentic yr. Tote bag trust fund readymade bitters paleo, XOXO flannel viral asymmetrical freegan you probably haven't heard of them four loko fashion axe Etsy. Chillwave Pitchfork health goth Truffaut, mumblecore banjo letterpress Austin try-hard lo-fi ethical asymmetrical literally quinoa McSweeney's. Flannel tote bag occupy you probably haven't heard of them PBR salvia. Chambray squid polaroid, narwhal swag taxidermy Portland selvage quinoa master cleanse readymade food truck stumptown. Neutra ugh chillwave Schlitz tofu put a bird on it Pinterest, occupy try-hard narwhal kogi migas small batch skateboard. Hoodie DIY Truffaut Austin kogi. </p>
+			</div>
+
+			<div class="group" id="right">
+				<div class="group smalltile"></div>
+				<div class="group smalltile"></div>
+				<div class="group smalltile"></div>
+			</div>
+		</div>
+		<footer class="footer">
+			<p>1064 Van Buren Ave</p>
+		</footer>	
+	</body>
+
+<script type="text/javascript">
+			$(function() {
+				$('#slider').carouFredSel({
+					width: '100%',
+					align: false,
+					items: 3,
+					items: {
+						width: $('#wrapper').width() * 0.2,
+						height: 335,
+						visible: 1,
+						minimum: 1
+					},
+					scroll: {
+						items: 1,
+						timeoutDuration : 5000,
+						onBefore: function(data) {
+			
+							//	find current and next slide
+							var currentSlide = $('.slide.active', this),
+								nextSlide = data.items.visible,
+								_width = $('#wrapper').width();
+			
+							//	resize currentslide to small version
+							currentSlide.stop().animate({
+								width: _width * 0.2
+							});		
+							currentSlide.removeClass( 'active' );
+			
+							//	hide current block
+							data.items.old.add( data.items.visible ).find( '.slide-block' ).stop().fadeOut();					
+			
+							//	animate clicked slide to large size
+							nextSlide.addClass( 'active' );
+							nextSlide.stop().animate({
+								width: _width * 0.6
+							});						
+						},
+						/*onAfter: function(data) {
+							//	show active slide block
+							data.items.visible.last().find( '.slide-block' ).stop().fadeIn();
+						}*/
+					},
+					onCreate: function(data){
+			
+						//	clone images for better sliding and insert them dynamacly in slider
+						var newitems = $('.slide',this).clone( true ),
+							_width = $('#wrapper').width();
+
+						$(this).trigger( 'insertItem', [newitems, newitems.length, false] );
+			
+						//	show images 
+						$('.slide', this).fadeIn();
+						$('.slide:first-child', this).addClass( 'active' );
+						$('.slide', this).width( _width * 0.2 );
+			
+						//	enlarge first slide
+						$('.slide:first-child', this).animate({
+							width: _width * 0.6
+						});
+			
+						//	show first title block and hide the rest
+						$(this).find( '.slide-block' ).hide();
+						$(this).find( '.slide.active .slide-block' ).stop().fadeIn();
+					}
+				});
+			
+				//	Handle click events
+				$('#slider').children().click(function() {
+					$('#slider').trigger( 'slideTo', [this] );
+				});
+			
+				//	Enable code below if you want to support browser resizing
+				$(window).resize(function(){
+			
+					var slider = $('#slider'),
+						_width = $('#wrapper').width();
+			
+					//	show images
+					slider.find( '.slide' ).width( _width * 0.2 );
+			
+					//	enlarge first slide
+					slider.find( '.slide.active' ).width( _width * 0.6 );
+			
+					//	update item width config
+					slider.trigger( 'configuration', ['items.width', _width * 0.2] );
+				});
+
+			});
+		</script>	
+</html>

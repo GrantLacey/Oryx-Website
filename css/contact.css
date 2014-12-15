@@ -1,0 +1,157 @@
+/*
+Contact GIT COMMENT
+__________________________________*/
+
+#total {
+	display: inline;
+}
+#map {
+	min-height: 700px;
+	width: 1160px;
+	background: url('../img/worldMap.jpg') no-repeat center;
+	background-size: cover;
+	overflow: scroll;
+}
+
+#ContactPane {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+	line-height: 1.35em;
+	/*border: 1px solid red;*/
+	margin: -700px 0 0 80%;
+	width: 500px;
+	height: 700px;
+	float: right;
+}
+
+#ContactPane div {
+	border: 1px solid gray;
+	width: 500px;
+	height: 130px;	
+	margin: 1em 0 0 0;
+	padding: .5em .5em 0 .5em;
+	position: relative;
+	overflow: none;
+}
+
+.ContactPhone {
+	float: left;
+	margin: 0;
+}
+
+.ContactAddress {
+	float: left;
+	margin: 0em 0 0 2em;
+}
+
+.contact-container {
+	float: right;
+}
+
+.contact-container ul li {
+	text-decoration: none;
+}
+
+.NAmerica {
+	border: 1px solid red;
+	width: 410px;
+	height: 260px;
+	margin: 95px 0 0 0%;
+	position: absolute;
+}
+
+.SAmerica {
+	border: 1px solid green;
+	width: 250px;
+	height: 270px;
+	margin: 357px 0 0 184px;
+	position: absolute;
+}
+
+.Europe {
+	border: 1px solid gray;
+	width: 190px;
+	height: 291px;
+	margin: 90px 0 0 420px;
+	position: absolute;
+}
+
+.Africa {
+	border: 1px solid yellow;
+	width: 244px;
+	height: 20%;
+	margin: 380px 0 0 450px;
+	position: absolute;
+}
+/*#USA {
+	border: 1px solid red;
+	width: 300px;
+	height: 300px;
+	position: relative;
+}*/
+
+
+
+
+
+/*
+ligthbox
+__________________________________*/
+
+#overlay {
+  background:rgba(0,0,0,0.7);
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  display:none;
+  text-align:center;
+}
+
+.show {
+	color: black;
+	background-color: white;
+	border: 5px solid white;
+}
+
+/*#overlay img {
+ margin-top: 10%; 
+}*/
+
+#overlay p {
+ color:white; 
+}
+
+
+/*#P1 {
+	display: none;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

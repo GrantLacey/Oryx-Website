@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact 2.0</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+
+  <header id="header" class="group">
+    <a href="index.html"  id="logo" class="group">
+      <img id="logoimg" src="img/webLogoCropped.png" alt="" />
+    </a>
+
+    <div id="language" class="group">
+      <a href="tbd.html">English</a>
+      <a href="tbd.html">Portugese</a>
+      <a href="tbd.html">Mandarin</a>     
+    </div>
+
+    <ul id="nav" class="nav group">   
+        <li><a href="products.html">Product Line</a></li>
+        <li><a href="about.html">About Oryx</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>   
+  </header>
+
+<body>
+    <div id="total">
+      <div id="map" class="group">
+        <div class="NAmerica" id="USA" ></div>
+        <div class="SAmerica" id="SA" ></div>
+        <div class="Europe"></div>
+        <div class="Africa" id="AF" ></div>
+      </div>
+
+      <div class="contact-container">
+        <div id="ContactPane" class="group">
+            <div class="NAmerica Africa group">
+              <p class="ContactPhone group">
+                  <em class="lineOne">North America Sales | Oryx World HQ</em></br>
+                </br>
+                  phone: +1 (704) 893-0202</br>
+                </br>
+                  email: sales@oryxsystems.com</br></p>
+              <p class="ContactAddress group">
+                </br>
+                </br>
+                  1064 Van Buren Ave | Suite 6</br>
+                  Indian Trail, NC 28079</br>
+                  United States of America</br>
+              </p>
+            </div>
+            <div class="SAmerica group">
+              <p></p>
+              <p></br>
+                  </p>
+            </div>
+            <div class="Europe group">
+              <p></p>
+              <p></br>
+                  </p>
+            </div>
+            <div class="NAmerica Africa group">
+              <p></p>
+              <p></br>
+                  </p>
+            </div>
+            <div class="NAmerica Africa group">
+              <p></p>
+              <p></br>
+                  </p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        var $overlay = $('<div id="overlay"></div>');
+        var $caption = $("<p>Click to clear</p>");
+
+      $overlay.append($caption);
+      $("body").append($overlay);
+
+      $("#map div").click(function(){
+        //varClass = null;
+
+        console.log($(varClass));
+          //console.log($(this));
+
+          //Trying to get varClass variable have the class propert ex".NAmerica"
+          var varClass = $(this).attr("class");
+          $overlay.show();
+          //alert('Total is ' + varClass);
+          //If I manually select then modify the ".NAmerica" class the effect works
+          $("#ContactPane ." + varClass).addClass("show").show().css({"background-color":"none","z-index":"50"});
+          $(".MapCLick").hide();
+      });
+
+      $overlay.click(function(){
+        $overlay.hide();
+        $("#ContactPane .NAmerica").css({"background-color":"none","z-index":"0"});
+        $("#ContactPane .SAmerica").css({"background-color":"none","z-index":"0"});
+        $("#ContactPane .Africa").css({"background-color":"none","z-index":"0"});
+        $("#ContactPane .Europe").css({"background-color":"none","z-index":"0"});
+        $(".MapCLick").show().css({"background-color":"transparent"});        
+
+
+      });
+    });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
