@@ -207,7 +207,16 @@ __________________________________*/
 	background: -webkit-linear-gradient(45deg, #E0E0E0, white );
 }
 
+/* clearfix styles */
 
+.group:before,
+.group:after {
+  display: table;
+  content: "";
+}
+.group:after {
+  clear: both;
+}
 
 
 
