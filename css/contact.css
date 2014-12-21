@@ -1,10 +1,13 @@
 /*
 Contact TEST COMMENT FOR GIT
-__________________________________*/
+__________________________________
+html {
+	overflow: visible;
+}
 
 #total {
 	display: inline;
-}
+}*/
 
 #map {
 	min-height: 700px;
@@ -16,22 +19,25 @@ __________________________________*/
 
 .contact-container {
 	width: 40%;
+	margin: -700px 0 0 0;
 	float: right;
 	overflow: visible;
+	white-space: nowrap;
+	text-overflow: ellipsis;
 	border: 1px solid green;
-
 }
 
 #ContactPane {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	line-height: 1.35em;
-	border: 1px solid red;
-	margin: -700px 0 0 0;
+	margin: 0 0 0 0;
 	width: 95%;
 	height: 700px;
+	overflow: visible;
 	float: right;
-	overflow-x: hidden;
+	text-overflow: ellipsis;
+	border: 1px solid red;
 }
 
 #ContactPane div {
@@ -39,33 +45,33 @@ __________________________________*/
 	width: 80%;
 	height: 170px;	
 	margin: 1em 0 0 0;
-	padding: .5em .5em 0 .5em;
+	padding: 0;
 	float: right;
 	position: relative;
+	overflow: visible;
+	text-overflow: ellipsis;
 
 }
 
-#NAmericaHead {
-	margin: 0;
-	height: 1em;
-	float: left;
-}
 
 #ContactPane div p {
 	display: inline-block;
-	clear: left;
 }
 
 .ContactPhone {
 	height: 125px;
 	width: 45%;
+	min-width: 210px;
 	margin: 0;
 }
 
 .ContactAddress {
 	height: 125px;
 	width: 45%;
+	min-width: 175px;
 	margin: 0 0 0 0;
+	overflow: visible;
+	text-overflow: ellipsis;
 }
 
 
