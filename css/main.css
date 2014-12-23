@@ -27,11 +27,12 @@ Header
 __________________________________*/
 
 #header {
-	margin: 1em 0 0 0;
+	margin: 0 0 0 0;
 }
 
 #logo {
 	float: left;
+	clear: both;
 }
 
 /*
@@ -40,7 +41,7 @@ __________________________________*/
 
 #language {
 	text-align: right;
-	width: 55%;
+	width: 30%;
 	float: right;
 }
 
@@ -66,8 +67,11 @@ __________________________________*/
 	text-align: right;
 	margin: 5em 0 0 0;
 	padding: 0 0;
-	width: 55%;
+	width: 29%;
+	min-width: 435px;
+	clear: right;
 	float: right;
+
 }
 
 
