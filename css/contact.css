@@ -18,7 +18,7 @@ html {
 }
 
 .contact-container {
-	width: 40%;
+	width: 30%;
 	margin: -500px 0 0 0;
 	float: right;	
 	overflow: visible;
@@ -28,7 +28,7 @@ html {
 
 #ContactPane {
 	font-family: 'Open Sans', sans-serif;
-	font-weight: 800;
+	font-weight: 300;
 	line-height: 1.5em;
 	margin: 0 0 0 0;
 	width: 95%;
@@ -50,34 +50,33 @@ html {
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
-
-
+	transition:height 0.5s; /* Animation time */
+	-webkit-transition:height 0.5s; /* For Safari */
 }
 
 
-#ContactPane div p {
-	display: inline-block;
+#ContactPane div:hover {
+    height: 200px; /* This is the height on hover */
 }
 
-.ContactPhone {
-	height: 250px;
-	width: 45%;
-	min-width: 210px;
-	margin: 0;
+
+.ContactInfo {
+	height: 95%;
+	width: 95%;
+	margin: .15em .5em;
+	line-height: 1.5em;
 	overflow: hidden;
 	white-space: nowrap;
-	text-overflow: ellipsis;
+	text-overflow: visible;
 }
 
-.ContactAddress {
-	height: 125px;
-	width: 45%;
-	min-width: 175px;
-	margin: 0 0 0 0;
-	position: relative;
-	bottom: 1.35em;
-	overflow: visible;
+.ContactHead {
+	font-weight: 400;
+	line-height: 2em;
+}
 
+.EmailPhone {
+	line-height: 1.8em;
 }
 
 
