@@ -108,23 +108,21 @@
           $("body").append($overlay);
 
           $("#map div").click(function(){
-          //varClass = null;
 
             console.log($(varClass));
-            //console.log($(this));
-
-            //Trying to get varClass variable have the class propert ex".NAmerica"
             var varClass = $(this).attr("class");
             $overlay.show();
-            //alert('Total is ' + varClass);
-            //If I manually select then modify the ".NAmerica" class the effect works
-            $("#ContactPane ." + varClass).addClass("show").show().css({"background-color":"none","z-index":"50"});
+
+            $("#ContactPane div." + varClass).css({"z-index":"50"});
+            $("#ContactPane div." + varClass).css({"background-color":"white"});
             $(".MapCLick").hide();
           });
 
         $overlay.click(function(){
           $overlay.hide();
-          $("#ContactPane .NAmerica").css({"background-color":"transparent","z-index":"0"});
+          $("#ContactPane .NAmerica").css({"z-index":"0"});
+          $("#ContactPane .NAmerica").css({"background-color":"rgba(224,224,224, .7)"});
+          //$("#ContactPane .NAmerica").removeClass("show");
           $("#ContactPane .SAmerica").css({"background-color":"none","z-index":"0"});
           $("#ContactPane .Africa").css({"background-color":"none","z-index":"0"});
           $("#ContactPane .Europe").css({"background-color":"none","z-index":"0"});
