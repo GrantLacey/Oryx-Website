@@ -122,10 +122,16 @@
           $overlay.hide();
           $("#ContactPane .NAmerica").css({"z-index":"0"});
           $("#ContactPane .NAmerica").css({"background-color":"rgba(224,224,224, .7)"});
-          //$("#ContactPane .NAmerica").removeClass("show");
-          $("#ContactPane .SAmerica").css({"background-color":"none","z-index":"0"});
-          $("#ContactPane .Africa").css({"background-color":"none","z-index":"0"});
-          $("#ContactPane .Europe").css({"background-color":"none","z-index":"0"});
+
+          $("#ContactPane .SAmerica").css({"z-index":"0"});
+          $("#ContactPane .SAmerica").css({"background-color":"rgba(224,224,224, .7)"});
+
+          $("#ContactPane .Africa").css({"z-index":"0"});
+          $("#ContactPane .Africa").css({"background-color":"rgba(224,224,224, .7)"});
+
+          $("#ContactPane .Europe").css({"z-index":"0"});
+          $("#ContactPane .Europe").css({"background-color":"rgba(224,224,224, .7)"});
+
           $(".MapCLick").show().css({"background-color":"transparent"});        
         });
 
