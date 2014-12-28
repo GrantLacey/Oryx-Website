@@ -7,7 +7,12 @@ html {
 	max-width: 1490px;
 	height: 100%;
 	margin: auto;
+	
+}
+
+body {
 	font-family: 'Open Sans', sans-serif;
+	
 }
 
 img {
@@ -86,19 +91,7 @@ __________________________________*/
 Dropdown
 __________________________________*/
 
-#Products {
-	height: 5px;
-	position: relative;
-	transition:height 0.5s; /* Animation time */
-	-webkit-transition:height 0.5s; /* For Safari */
-}
 
-#Products:hover {
-    height: 200px; /* This is the height on hover */
-    width: 110%;
-    z-index: 80;
-    border: 1px solid green;
-}
 
 /*
 Section
@@ -127,6 +120,10 @@ __________________________________*/
 	color: rgb(56, 56, 56);
 	margin: 1em 0 0 0;
 	padding-bottom: 0em;
+}
+
+@media (max-width: 89em) {
+	font-size: .6em;
 }
 
 #leftside {
