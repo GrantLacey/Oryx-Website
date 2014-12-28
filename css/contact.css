@@ -53,9 +53,9 @@ html {
 	background-color: rgba(224,224,224, .7);
 	box-shadow: 10px 10px 15px -7px rgba(160, 160, 160, .8);
 	text-overflow: ellipsis;
-	transition:height 0.5s; /* Animation time */
+	transition:height 0.7s; /* Animation time */
 	transition:width 0.5s;
-	-webkit-transition:height 0.5s; /* For Safari */
+	-webkit-transition:height 0.7s; /* For Safari */
 	-webkit-transition:width 0.5s;
 }
 

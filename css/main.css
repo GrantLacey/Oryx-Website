@@ -188,7 +188,7 @@ __________________________________*/
 
 .tile {
 	margin: 1.8em 0 1.9em 0em;
-	width: 520px;
+	max-width: 480px;
 	height: 120px;
 	border-radius: 3px;
 	background-color: rgb(80, 80, 80);
@@ -202,6 +202,10 @@ __________________________________*/
 	margin: 0em 0em 0 0;
 	padding: 5em 0 0 0;
 	text-shadow: 0px 0 0px;
+}
+
+#be {
+	color: rgb(224,224,224);
 }
 
 #metal-strip {

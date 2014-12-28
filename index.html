@@ -45,7 +45,7 @@
 					</div>
 				</div>
 		
-				<div class="slide" style="background-image: url(img/LG700.png);">
+				<div class="slide" style="background-image: url(img/data.png);">
 					<div class="slide-block">
 						<h4>LG700</h4>
 						<p></p>
@@ -58,7 +58,9 @@
 		<div id="section">
 			<div id="leftside" class="group">
 				<h1>What would you like to measure or detect?</h1>
-				<div class="tile group" id="batteryElectrode"></div>
+				<div class="tile group" id="batteryElectrode">
+					<p id="be">battery electrode</p>
+				</div>
 				<div class="tile group" id="metal-strip">
 					<p>metal sheet | metal strip</p>
 				</div>
@@ -155,12 +157,14 @@
 						//	show first title block and hide the rest
 						$(this).find( '.slide-block' ).hide();
 						$(this).find( '.slide.active .slide-block' ).stop().fadeIn();
+						//$("#slider").trigger("pause");
 					}
 				});
 			
 				//	Handle click events
 				$('#slider').children().click(function() {
 					$('#slider').trigger( 'slideTo', [this] );
+
 				});
 			
 				//	Enable code below if you want to support browser resizing
@@ -180,6 +184,7 @@
 				});
 
 			});
+
 
 		</script>	
 </html>
