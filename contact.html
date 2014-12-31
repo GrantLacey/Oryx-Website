@@ -115,6 +115,7 @@
 
             $("#ContactPane div." + varClass).css({"z-index":"50"});
             $("#ContactPane div." + varClass).css({"background-color":"white"});
+            $("#ContactPane div." + varClass).css({"box-shadow":"none"});
             $(".MapCLick").hide();
           });
 
@@ -122,15 +123,19 @@
           $overlay.hide();
           $("#ContactPane .NAmerica").css({"z-index":"0"});
           $("#ContactPane .NAmerica").css({"background-color":"rgba(224,224,224, .7)"});
+          $("#ContactPane .NAmerica").css({"box-shadow":"10px 10px 15px -7px rgba(160, 160, 160, .8)"});
 
           $("#ContactPane .SAmerica").css({"z-index":"0"});
           $("#ContactPane .SAmerica").css({"background-color":"rgba(224,224,224, .7)"});
+          $("#ContactPane .SAmerica").css({"box-shadow":"10px 10px 15px -7px rgba(160, 160, 160, .8)"});
 
           $("#ContactPane .Africa").css({"z-index":"0"});
           $("#ContactPane .Africa").css({"background-color":"rgba(224,224,224, .7)"});
+          $("#ContactPane .Africa").css({"box-shadow":"10px 10px 15px -7px rgba(160, 160, 160, .8)"});
 
           $("#ContactPane .Europe").css({"z-index":"0"});
           $("#ContactPane .Europe").css({"background-color":"rgba(224,224,224, .7)"});
+          $("#ContactPane .Europe").css({"box-shadow":"10px 10px 15px -7px rgba(160, 160, 160, .8)"});
 
           $(".MapCLick").show().css({"background-color":"transparent"});        
         });

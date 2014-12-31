@@ -27,7 +27,7 @@
 				margin: 0 0 0 0;
 				height: 335px;
 				overflow: hidden;
-				background: url(img/ajax-loader.gif) center center no-repeat;
+				background: url(../img/ajax-loader.gif) center center no-repeat;
 			}
 			
 			#slider .slide {
